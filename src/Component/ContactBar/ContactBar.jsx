@@ -15,7 +15,6 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Button from "@mui/material/Button";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import SettingsIcon from "@mui/icons-material/Settings";
-import Divider from "@mui/material/Divider";
 import ImageIcon from "@mui/icons-material/Image";
 import contact from "../../../contact.json"
 
@@ -31,10 +30,13 @@ const ContactBar = () => {
           border: 1,
           borderRadius: "10px",
           bgcolor: "blanchedalmond",
+          overflow : "auto"
         }}
       >
         {/* profile div */}
         <Box sx={{ width: 1 / 6 }}>
+        
+          {/* <Box sx={{position : "sticky"}}> */}
         <List
             sx={{
               width: "500%",
@@ -55,7 +57,8 @@ const ContactBar = () => {
               <SettingsIcon />
             </ListItem>
           </List>
-          {/* search box */}
+          {/* </Box> */}
+            {/* search box */}
           <Box
             sx={{
               width: "500%",
@@ -80,6 +83,7 @@ const ContactBar = () => {
             <ChatIcon />
             <GroupsIcon sx={{ width: "200px" }} />
             <AddIcCallIcon sx={{ m: 1 }} />
+       
           </Box>
           {/* contact list */}
           {contact.map((items,index)=>{
@@ -113,7 +117,6 @@ const ContactBar = () => {
                     }
                   />
                 </ListItem>
-                <Divider variant="inset" component="li" />
               </List>
               <hr />
             </List>
