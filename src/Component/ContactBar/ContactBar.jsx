@@ -11,7 +11,6 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Typography from "@mui/material/Typography";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Button from "@mui/material/Button";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -86,12 +85,9 @@ const ContactBar = () => {
        
           </Box>
           {/* contact list */}
-          {contact.map((items,index)=>{
+          {contact.map((items)=>{
             return(
               <> 
-              {console.log(items.image)}
-              {console.log(index)}
-
               <List sx={{ width: "600%" }}>
               <List sx={{ width: "100%", maxWidth: 360 }}>
                 <ListItem alignItems="flex-start" sx={{ width: "100%" }}>
@@ -125,10 +121,7 @@ const ContactBar = () => {
             )
           })}
         
-          {/* down arror */}
-          <Box>
-            <KeyboardArrowDownIcon />
-          </Box>
+          
           {/* contact button */}
           <Box>
             <Button
