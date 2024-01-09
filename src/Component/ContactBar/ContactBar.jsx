@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -15,12 +16,11 @@ import Button from "@mui/material/Button";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ImageIcon from "@mui/icons-material/Image";
-import contact from "../../../contact.json"
+// import contacts from '../../../contacts.json'
 
-const ContactBar = () => {
+const ContactBar = ({contacts, onItemClick}) => {
   return (
     <>
-   
     {/* main div */}
       <Box
         sx={{
@@ -33,9 +33,7 @@ const ContactBar = () => {
         }}
       >
         {/* profile div */}
-        <Box sx={{ width: 1 / 6 }}>
-        
-          {/* <Box sx={{position : "sticky"}}> */}
+        <Box sx={{ width: 1 / 6,position : 'sticky' }}>
         <List
             sx={{
               width: "500%",
@@ -85,12 +83,16 @@ const ContactBar = () => {
        
           </Box>
           {/* contact list */}
-          {contact.map((items)=>{
+          {contacts.map((items)=>{
             return(
               <> 
-              <List sx={{ width: "600%" }}>
-              <List sx={{ width: "100%", maxWidth: 360 }}>
-                <ListItem alignItems="flex-start" sx={{ width: "100%" }}>
+              <List sx={{ cursor : 'pointer',width: "600%", maxWidth: 360 }}  >
+                <ListItem
+                 alignItems="flex-start"
+                 sx={{ width: "100%" }} 
+                //  onClick={() => onItemClick(items)}
+                onClick={() => onItemClick(items)}
+                 key={items.id} >
                   <ListItemAvatar>
                   <Avatar
                   alt={items.name}
@@ -115,13 +117,9 @@ const ContactBar = () => {
                 </ListItem>
               </List>
               <hr />
-            </List>
             </>
-
             )
           })}
-        
-          
           {/* contact button */}
           <Box>
             <Button

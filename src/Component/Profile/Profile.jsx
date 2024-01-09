@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import ClearIcon from '@mui/icons-material/Clear';
 import  Avatar  from "@mui/material/Avatar";
@@ -8,22 +9,26 @@ import ListItemText from "@mui/material/ListItemText";
 import VideoChatIcon from '@mui/icons-material/VideoChat';
 import CallIcon from '@mui/icons-material/Call';
 import Button from "@mui/material/Button";
-function Profile() {
+function Profile({data}) {
+  const [display,setDisplay] = useState(false)
+  const handleClick = () =>{
+    setDisplay(true)
+  }
   return (
     <>
-    <Box sx={{ width: "20%", height: "190%", border: 1, borderRadius: "10px", bgcolor: "blanchedalmond", }} >
-        <ClearIcon />
+    <Box sx={{ width: "20%", height: "190%", border: 1, borderRadius: "10px", bgcolor: "blanchedalmond",display : display ? "none" : ""}} >
+        <ClearIcon sx={{cursor : 'pointer'}} onClick={handleClick}/>
         
     <Avatar
-        alt="Remy Sharp"
-        src="/static/images/avatar/1.jpg"
+        alt={data?.name}
+        src={data?.image}
         sx={{ width: '50%', height: '15%', m:7 }}
       />
         <ListItem>
         <ListItemAvatar>
           
         </ListItemAvatar>
-        <ListItemText primary="Bharada divyesh" secondary="online" sx={{p:0}} />
+        <ListItemText primary={data?.name} secondary={data?.status} sx={{p:0}} />
       </ListItem>
       <Box sx={{display : 'flex'}}>
         <VideoChatIcon sx={{width : "70%"}}/>
@@ -31,29 +36,18 @@ function Profile() {
       </Box>
      <Box>
        <ListItemText
-    //    sx={{alignItems : "center"}}
           primary="Bio"
           secondary={
             <React.Fragment>
-              {" — I'll be in your neighborhood doing errands this…"}
+              {data?.bio}
             </React.Fragment>
           }
         />
          <ListItemText
-    //    sx={{alignItems : "center"}}
           primary="Phone Number"
           secondary={
             <React.Fragment>
-              {9327511543}
-            </React.Fragment>
-          }
-        />
-         <ListItemText
-    //    sx={{alignItems : "center"}}
-          primary="UserName"
-          secondary={
-            <React.Fragment>
-              {"Bharada Divyesh"}
+              {data?.number}
             </React.Fragment>
           }
         />
