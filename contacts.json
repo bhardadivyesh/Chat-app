@@ -1,44 +1,66 @@
 [
     {
         "id" : 1,
-        "image" : "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.befunky.com%2Fimages%2Fprismic%2F82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg%3Fauto%3Davif%2Cwebp%26format%3Djpg%26width%3D896&tbnid=zOGJp75AxOg-7M&vet=12ahUKEwitq6eIo8GDAxUza2wGHfEOCLEQMygUegUIARCeAQ..i&imgrefurl=https%3A%2F%2Fwww.befunky.com%2Ffeatures%2Fblur-image%2F&docid=KwafTdewQkEguM&w=896&h=504&itg=1&q=images&ved=2ahUKEwitq6eIo8GDAxUza2wGHfEOCLEQMygUegUIARCeAQ",
+        "image" : " ",
         "name" : "jatin daki",
-        "message" : ["hello","how are you","welcome","were are you going","what are you doing"],
+        "message":[
+             {
+                "sender" :"hello"
+             },
+             {
+                "receiver":"how are you?"
+             },
+             {
+                "receiver":"hy"
+             }
+        ],
         "status" : "offline",
         "bio" : "not found!",
         "number" : 9958678451
     },
     {
         "id" : 2,
-        "image" : "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.befunky.com%2Fimages%2Fprismic%2F82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg%3Fauto%3Davif%2Cwebp%26format%3Djpg%26width%3D896&tbnid=zOGJp75AxOg-7M&vet=12ahUKEwitq6eIo8GDAxUza2wGHfEOCLEQMygUegUIARCeAQ..i&imgrefurl=https%3A%2F%2Fwww.befunky.com%2Ffeatures%2Fblur-image%2F&docid=KwafTdewQkEguM&w=896&h=504&itg=1&q=images&ved=2ahUKEwitq6eIo8GDAxUza2wGHfEOCLEQMygUegUIARCeAQ",
-        "name" : "divyesh bharada",
-        "message" : ["hello","how are you","welcome","were are you going","what are you doing","welcome brother" ],
+        "image" : " ",
+        "name" : "bharada divyesh",
+        "message":[
+             {
+                "sender" :"hy"
+             },
+             {
+                "receiver":"how are you?"
+             },
+             {
+                "sender":"i am fine"
+             },
+             {
+                "receiver":"whats your name"
+             },
+             {
+                "sender":"bharada divyesh"
+             }
+        ],
         "status" : "online",
-        "bio" : "emmergency only",
+        "bio" : "welcome",
         "number" : 9327511543
-
     },
     {
         "id" : 3,
-        "image" : "https://www.google.com/imgres?imgurl=https%3A%2F%2Fslp-statics.astockcdn.net%2Fstatic_assets%2Fstaging%2F24winter%2Fhome%2Fcurated-collections%2Fcard-2.jpg%3Fwidth%3D580&tbnid=3Hk1e6KCsGX65M&vet=12ahUKEwitq6eIo8GDAxUza2wGHfEOCLEQMygVegUIARCgAQ..i&imgrefurl=https%3A%2F%2Fstock.adobe.com%2F&docid=PxLbPiWIURyRuM&w=580&h=435&q=images&ved=2ahUKEwitq6eIo8GDAxUza2wGHfEOCLEQMygVegUIARCgAQ",
-        "name" : "prakash bharada",
-        "message" : ["hello","how are you","welcome","were are you going","what are you doing","welcome brother"],
-        "lastseen" : "last seen today at 10:21 pm",
+        "image" : " ",
+        "name" : "bharada prakash",
+        "message":[
+             {
+                "sender" :"hello"
+             },
+             {
+                "receiver":"how are you?"
+             },
+             {
+                "receiver":"hy"
+             }
+        ],
         "status" : "online",
         "bio" : "not found!",
-        "number" : 9927145896
-
-    },
-    {
-        "id" : 3,
-        "image" : "https://www.google.com/imgres?imgurl=https%3A%2F%2Fslp-statics.astockcdn.net%2Fstatic_assets%2Fstaging%2F24winter%2Fhome%2Fcurated-collections%2Fcard-2.jpg%3Fwidth%3D580&tbnid=3Hk1e6KCsGX65M&vet=12ahUKEwitq6eIo8GDAxUza2wGHfEOCLEQMygVegUIARCgAQ..i&imgrefurl=https%3A%2F%2Fstock.adobe.com%2F&docid=PxLbPiWIURyRuM&w=580&h=435&q=images&ved=2ahUKEwitq6eIo8GDAxUza2wGHfEOCLEQMygVegUIARCgAQ",
-        "name" : "kuldip bharada",
-        "message" : ["hello","how are you","welcome","were are you going","what are you doing","welcome brother" ],
-        "status" : "offline",
-        "bio" : "busy",
         "number" : 7265040882
-
     }
-
 
 ]

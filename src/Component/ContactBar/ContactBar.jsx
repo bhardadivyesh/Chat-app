@@ -16,7 +16,7 @@ import Button from "@mui/material/Button";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ImageIcon from "@mui/icons-material/Image";
-// import contacts from '../../../contacts.json'
+
 
 const ContactBar = ({contacts, onItemClick}) => {
   return (
@@ -90,14 +90,13 @@ const ContactBar = ({contacts, onItemClick}) => {
                 <ListItem
                  alignItems="flex-start"
                  sx={{ width: "100%" }} 
-                //  onClick={() => onItemClick(items)}
                 onClick={() => onItemClick(items)}
                  key={items.id} >
                   <ListItemAvatar>
                   <Avatar
-                  alt={items.name}
-                  src={items.image}
-                />
+                      alt={items.name}
+                      src={items.image}
+                    />
                   </ListItemAvatar>
                   <ListItemText
                     primary={items.name}
@@ -110,7 +109,7 @@ const ContactBar = ({contacts, onItemClick}) => {
                         >
                          
                         </Typography>
-                        {items.message}
+                        {/* {items.message} */}
                       </React.Fragment>
                     }
                   />

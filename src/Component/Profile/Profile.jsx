@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import ClearIcon from '@mui/icons-material/Clear';
 import  Avatar  from "@mui/material/Avatar";
@@ -9,14 +9,17 @@ import ListItemText from "@mui/material/ListItemText";
 import VideoChatIcon from '@mui/icons-material/VideoChat';
 import CallIcon from '@mui/icons-material/Call';
 import Button from "@mui/material/Button";
-function Profile({data}) {
+function Profile({data,isDisplay}) {
   const [display,setDisplay] = useState(false)
   const handleClick = () =>{
-    setDisplay(true)
+    setDisplay(false)
   }
+  useEffect(()=>{
+    setDisplay(isDisplay)
+  },[data])
   return (
     <>
-    <Box sx={{ width: "20%", height: "190%", border: 1, borderRadius: "10px", bgcolor: "blanchedalmond",display : display ? "none" : ""}} >
+    <Box sx={{ width: "20%", height: "190%", border: 1, borderRadius: "10px", bgcolor: "blanchedalmond",display : display ? "" : "none"}} >
         <ClearIcon sx={{cursor : 'pointer'}} onClick={handleClick}/>
         
     <Avatar
@@ -80,5 +83,4 @@ function Profile({data}) {
   </>
   )
 }
-
 export default Profile

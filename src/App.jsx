@@ -1,11 +1,8 @@
-
-import MainComponent from "./Component/Main/MainComponent";
+import MainComponent from "./Component/Main/MainComponent"
 function App() {
- 
-
   return (
     <>
-     <MainComponent />
+    <MainComponent />
     </>
   )
 }

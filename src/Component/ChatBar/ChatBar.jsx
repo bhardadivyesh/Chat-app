@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Chip from "@mui/material/Chip";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
@@ -5,14 +6,11 @@ import SendIcon from "@mui/icons-material/Send";
 import IconButton from "@mui/material/IconButton";
 import Avatar from "@mui/material/Avatar";
 import {List,ListItem,ListItemAvatar,ListItemText} from "@mui/material";
-function ChatBar(selectedContact) {
-  const handleNavClick = () =>{
-    console.log("nav click work");
-  }
- 
+
+function ChatBar({selectedContact,onNavClick}) {
   return (
     <>
-   
+
           <Box
         sx={{
           borderRadius: "10px",
@@ -23,31 +21,31 @@ function ChatBar(selectedContact) {
         }}
       >
         {/* navbar */}
-        <Box onClick={handleNavClick} sx={{cursor : 'pointer'}}>
-        <List sx={{ width: '200%', maxWidth: '100%', bgcolor: '#1c7534' }}>
-          <ListItem>
+        <Box sx={{cursor : 'pointer'}}>
+        <List sx={{ width: '200%', maxWidth: '100%', bgcolor: '#1c7534' }}  onClick={onNavClick(true)}>
+          <ListItem  >
             <ListItemAvatar>
-            <Avatar alt={selectedContact.selectdata?.name} src="/static/images/avatar/1.jpg"  />
+            <Avatar alt={selectedContact?.name} src={selectedContact?.image}  />
             </ListItemAvatar>
-            <ListItemText primary={selectedContact.selectdata?.name} secondary={selectedContact.selectdata?.lastseen} sx={{color : "white"}} />
+            <ListItemText primary={selectedContact?.name} secondary={selectedContact?.lastseen} sx={{color : "white"}} />
           </ListItem>
         </List>
       </Box>
         {/* navbar over*/}
-       
-        <Box sx={{ textAlign: "right" }}>
-        {selectedContact.selectdata?.message.map((items,index)=>{
-          return(
-            <div key={index}>
-            <Chip label={items} variant="outlined" />
-          </div>
-          )
-    })}
+       {selectedContact?.message.map((items,index)=>{
+        return(
+          <>
+          {console.log(index)}
+           <Box sx={{ textAlign: "right"}}>
+           {items.sender &&  <Chip label={items?.sender} variant="outlined" />}
+           </Box>
+            <Box>
+            {items.receiver &&  <Chip label={items?.receiver} />}
+            </Box>
+          </>
+        )
+       })}
         </Box>
-        <Box>
-          <Chip label="bharada divyesh" />
-        </Box>
-
         <Box
           sx={{
             position: "fixed",
@@ -69,7 +67,6 @@ function ChatBar(selectedContact) {
             </IconButton>
           </Box>
         </Box>
-      </Box>
     </>
   );
 }
